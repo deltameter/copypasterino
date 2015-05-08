@@ -1,0 +1,240 @@
+@media (max-width: 1000px){
+.navbar-left,.navbar-right {
+	float:none!important;
+	}
+
+	.navbar-toggle {
+	display:block;
+	}
+
+	.navbar-collapse {
+	border-top:1px solid transparent;
+	box-shadow:inset 0 1px 0 rgba(255,255,255,.1);
+	}
+
+	.navbar-fixed-top {
+	top:0;
+	border-width:0 0 1px;
+	}
+
+	.navbar-collapse.collapse {
+	display:none!important;
+	}
+
+	.navbar-nav {
+	float:none!important;
+	margin-top:7.5px;
+	}
+
+	.navbar-nav>li>a {
+	padding-top:10px;
+	padding-bottom:10px;
+	}
+
+	.collapse.in {
+	display:block!important;
+	}
+
+	.navbar-header,.navbar-nav>li {
+	float:none;
+	}
+}
+
+#titlerow {
+position:relative;
+word-wrap:normal;
+background-color:#4D6684;
+padding-bottom:30px;
+}
+
+#titletext {
+margin-bottom:1vw;
+}
+
+.desktop-title {
+font-size:5vw;
+font-weight:700;
+color:#FFF;
+padding-top:50px;
+}
+
+.mobile-title {
+font-size:10vw;
+font-weight:700;
+color:#FFF;
+padding-top:30px;
+}
+
+.navbar {
+z-index:999;
+}
+
+.nav-justified {
+padding-left:none;
+padding-right:none;
+}
+
+.navbar .nav >li>a {
+color:#337AB7;
+}
+
+.navbar .nav>li>a:focus {
+text-decoration:none;
+color:#337AB7;
+background-color:#C6C6C6;
+}
+
+.navbar .nav>li>a:hover {
+text-decoration:none;
+color:#337AB7;
+background-color:#D6D6D6;
+}
+
+.nav>li>a {
+font-size:18px;
+white-space:nowrap;
+border-radius:10px;
+padding-left:0;
+padding-right:0;
+margin:8px 4px;
+}
+
+.nav>li>a:focus {
+text-decoration:none;
+background-color:#C6C6C6;
+}
+
+.nav>li>a:hover {
+text-decoration:none;
+background-color:#D6D6D6;
+}
+
+body {
+background-image:url(http://i.imgur.com/azHHMqS.png);
+background-repeat:repeat;
+font-family:Ubuntu,sans-serif;
+}
+
+a {
+font-family:Ubuntu,sans-serif;
+font-weight:400;
+}
+
+h1 {
+	color:#4D6684;
+	font-size:24px;
+	margin-top: 0px;
+	margin-bottom: 30px;
+}
+
+h2 {
+font-size:1.4vw;
+vertical-align:center;
+font-weight:400;
+color:#F0F8FF;
+margin-top:-.5vw;
+}
+
+p {
+	color:#3D3D3D;
+	font-size:18px;
+	margin: 0px;
+}
+.trash {
+background-color:inherit;
+border-radius:0 0 0 10px;
+margin-top:18px;
+margin-left:-19px;
+border-color:none;
+padding:3px;
+}
+
+.btn-info,.btn-info:hover {
+background-color:#F8F8F8;
+color:#83AA30;
+border-radius:0 0 10px;
+margin-top:6px;
+margin-right:-19px;
+font-family:Ubuntu,sans-serif;
+border-color:#DDD;
+}
+
+.btn-info:focus {
+background-color:#83AA30;
+outline:0;
+color:#FFF;
+border-color:#DDD;
+}
+
+.well {
+border-radius:10px;
+font-size:18px;
+padding-bottom:0;
+color:#3D3D3D;
+white-space:pre-wrap;
+word-wrap:break-word;
+font-family:Lora,serif;
+}
+
+.tagscontainer {
+margin-top:15px;
+font-size:16px;
+color:#CCC;
+font-family:Lora,serif;
+padding:0;
+}
+
+.popover.right {
+font-size:18px;
+color:#FFF;
+background-color:#83AA30;
+box-shadow:none;
+vertical-align:center;
+border-color:#83AA30;
+}
+
+.popover.right>.arrow:after {
+border-right-color:#83AA30;
+box-shadow:none;
+}
+
+.popover.bottom {
+font-size:18px;
+color:#FFF;
+background-color:#E74700;
+box-shadow:none;
+border-color:#E74700;
+}
+
+.popover.bottom>.arrow:after {
+border-bottom-color:#E74700;
+box-shadow:none;
+}
+
+.pager .disabled a,.pager .disabled a:hover {
+color:#999;
+background-color:#fff;
+cursor:default;
+}
+
+.pager {
+color:#3D3D3D;
+font-size:16px;
+}
+
+#submitbutton a:hover,#submitbutton.chosen {
+color:#FFF;
+background-color:#83AA30;
+}
+
+.glyphicon-heart,p {
+color:#3D3D3D;
+}
+
+.glyphicon-heart.active,.red {
+color:#E74700;
+}
+
+.next a,.pager>li.a,.previous a {
+color:#4D6684;
+}
