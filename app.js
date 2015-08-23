@@ -166,7 +166,6 @@ app.post('/approvepasta', function(req, res){
             id: (pasta.id + 1),
             pasta: req.body.pasta,
             tags: req.body.tags, 
-            created_on : req.body.created_on,
             favourites: 0
             });
         approvedPasta.save();
@@ -185,7 +184,7 @@ app.post('/rejectpasta', function(req, res){
 });
 
 app.get('/getpendingpasta', function(req, res){
-    PendingPasta.findOne(function(err, pasta){
+    PendingPasta.findOne().sort({created_on:1}).exec(function(err, pasta){
         if (err) throw err;
         else{
             res.send(pasta);
@@ -354,6 +353,10 @@ function updateAllPastas(condition, category, timeFrame){
     queryAndSave("", condition, 'all', category, 1, timeFrame);
     queryAndSave("", condition, 'all', category, 2, timeFrame);
     queryAndSave("", condition, 'all', category, 3, timeFrame);
+    queryAndSave("", condition, 'all', category, 4, timeFrame);
+    queryAndSave("", condition, 'all', category, 5, timeFrame);
+    queryAndSave("", condition, 'all', category, 6, timeFrame);
+    queryAndSave("", condition, 'all', category, 7, timeFrame);
 }
 
 function updateTopPastas(argument, condition, typeName){
@@ -366,6 +369,10 @@ function updateTypePastas(argument, condition, typeName, category, timeFrame){
     queryAndSave(argument, condition, typeName, category, 1, timeFrame);
     queryAndSave(argument, condition, typeName, category, 2, timeFrame);
     queryAndSave(argument, condition, typeName, category, 3, timeFrame);
+    queryAndSave(argument, condition, typeName, category, 4, timeFrame);
+    queryAndSave(argument, condition, typeName, category, 5, timeFrame);
+    queryAndSave(argument, condition, typeName, category, 6, timeFrame);
+    queryAndSave(argument, condition, typeName, category, 7, timeFrame);
 }
 
 var updatePastaScore = function updateHotPastas(){

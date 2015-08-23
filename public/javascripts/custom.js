@@ -17,7 +17,7 @@ if ($(window).width() > 1000){
 	$("#titletext").addClass("mobile-title");
 	$("#navlist").addClass("navbar-nav");
 	$("#titlesubtext").hide();
-	$("#bsap_1302007").hide();
+	$("#ayylmao").hide();
 }
 var hasFlash = false;
 try {
@@ -293,7 +293,7 @@ function loadSettings(){
 	if (pageNumber === 1){
 		$(".next").removeClass("disabled");
 		$(".previous").addClass("disabled");
-	}else if (pageNumber === 3){
+	}else if (pageNumber === 7){
 		$(".next").addClass("disabled");
 		$(".previous").removeClass("disabled");
 	}else{
@@ -458,11 +458,11 @@ $(document).ready(function() {
 			//If the user has hit a button, they are neither going to be at the max page or min page
 			//therefore we can safely remove disabled from all classes
 			$(".disabled").removeClass("disabled");
-			if(button.hasClass("next") && requestOptions["id"] < 3){
+			if(button.hasClass("next") && requestOptions["id"] < 7){
 				requestOptions["id"]++;
 				requestCategoryPastas();
 				//disable button if gone past 3
-				if (requestOptions["id"] === 3){
+				if (requestOptions["id"] === 7){
 					button.addClass("disabled");
 				}
 			}else if (button.hasClass("previous") && requestOptions["id"] > 1){

@@ -14,5 +14,8 @@
     "ejs": "~0.8.5",
     "express": "~4.9.0",
     "mongoose": "^3.8.21"
+  },
+  "devDependencies": {
+    "flightplan": "^0.5.5"
   }
 }

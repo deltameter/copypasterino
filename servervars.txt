@@ -1,1 +1,1 @@
-{"alertMessage":"Press the heart button to add copypastas to your favorites tab. This way, you won't have to keep searching for your favorite pastas!","alertType":"alert-success"}
+{"alertMessage":"Want to learn to play CSGO? Visit <a href=\"https://csgoschool.com\"> CSGOSchool.com </a> for guides and lessons!","alertType":"alert-success"}
