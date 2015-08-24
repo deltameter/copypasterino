@@ -269,20 +269,6 @@ function disablePagination(){
 	$("#pagecounter").text("1");
 }
 
-function loadDeals(){
-	$.ajax({
-		type: 'GET',
-		url: '/getDeals',
-	}).done(function(deals){
-		if (deals == ""){
-			$("#deals").remove();
-		}else{
-			$.each(deals, function(index, deal){
-				$("#deals").append('<a href = ' + deal.link + '>' + deal.description + '<br></a>');
-			});
-		}
-	});
-};
 function loadSettings(){
 	var category = $("#category-name").data("category");
 	var pageNumber = $("#category-name").data("page")
@@ -331,7 +317,6 @@ $(document).ready(function() {
 	loadLocalPastas();
 	ZeroClipboard.config( { swfPath: "/images/ZeroClipboard.swf" } );
 	loadSettings();
-	loadDeals();
 	$(window).resize(function() {
 	    var viewportWidth = $(window).width();
 	    if (viewportWidth > 1000){
