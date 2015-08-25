@@ -104,7 +104,6 @@ app.get('/static/:pastatype/:category/:id', function(req, res){
 
 //When the user searches this shit happens
 app.get('/search/:terms', function(req, res){
-    console.log(req.params.terms);
     var regex = new RegExp(req.params.terms, 'i');
     Copypasta.find({ $text : {$search: req.params.terms} },
          { score: { $meta: "textScore" } })   
@@ -224,7 +223,6 @@ app.post('/adminupdatepasta', function(req, res){
 app.post('/adminupdatevar/:variable', function(req, res){
     if (req.params.variable === "alertMessage"){
         serverVars.alertMessage = req.body.change;
-        console.log(req.body.change);
     }else if (req.params.variable === "alertType"){
         serverVars.alertType = req.body.change;
     }
@@ -240,7 +238,6 @@ app.get('/copypastas/:pastaid', function(req, res){
     .limit(1)
     .exec(function(err, specificPasta){
         if (err) console.log(err);
-        console.log(specificPasta);
         res.render('pages/spec', {
             pasta: specificPasta[0].pasta,
             tags: specificPasta[0].tags,
@@ -261,7 +258,6 @@ app.get('/getDeals', function(req, res){
     });
 });
 app.post('/createad', function(req, res){
-    console.log(req.body.link);
     var newAd = new Ad({
         description: req.body.description,
         link: req.body.link
@@ -429,9 +425,6 @@ var hotUpdate = function updateHotJSONFiles(){
     updateTypePastas(dotaFilter, hotCondition, 'dota', 'hot', 0);
     updateTypePastas(lolFilter, hotCondition, 'lol', 'hot', 0);
     updateTypePastas(miscFilter, hotCondition, 'misc', 'hot', 0);
-
-
-    console.log("New and hot have been updated.");
 }
 
 //update them every restart
