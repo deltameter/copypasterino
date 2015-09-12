@@ -234,14 +234,20 @@ app.post('/adminupdatevar/:variable', function(req, res){
 
 
 app.get('/copypastas/:pastaid', function(req, res){
-    Copypasta.find({id: req.params.pastaid})
-    .limit(1)
+    Copypasta.findOne({id: req.params.pastaid})
     .exec(function(err, specificPasta){
         if (err) console.log(err);
+        if (!specificPasta){
+            specificPasta = {
+                    pasta: 'There is no pasta by that ID. It has probably been deleted or was never there to begin with.',
+                    tags: '#nopasta',
+                    pastaNum: req.params.pastaid
+                };
+        }
         res.render('pages/spec', {
-            pasta: specificPasta[0].pasta,
-            tags: specificPasta[0].tags,
-            pastaNum: specificPasta[0].id 
+            pasta: specificPasta.pasta,
+            tags: specificPasta.tags,
+            pastaNum: specificPasta.id 
         });
     });
 });
