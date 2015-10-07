@@ -92,6 +92,27 @@
       </div>
     </nav>
 
+    <div class = "serverhosting">
+      <script type="text/javascript">
+        ( function() {
+          if (window.innerWidth > 1000){
+            if (window.CHITIKA === undefined) { window.CHITIKA = { 'units' : [] }; };
+            var unit = {"calltype":"async[2]","publisher":"deltameter","width":728,"height":90,"sid":"Chitika Default"};
+            var placement_id = window.CHITIKA.units.length;
+            window.CHITIKA.units.push(unit);
+            document.write('<div id="chitikaAdBlock-' + placement_id + '"></div>');
+          }else{
+            CHITIKA = window.CHITIKA ? window.CHITIKA : { 'units' : [] };
+            CHITIKA.publisher = 'deltameter';
+            var s = document.createElement('script');
+            s.src = '//cdn.chitika.net/getads.js';
+            try { document.getElementsByTagName('head')[0].appendChild(s); } catch(e) { document.write(s.outerHTML); }
+          }
+      }());
+      </script>
+      <script type="text/javascript" src="//cdn.chitika.net/getads.js" async></script>
+    </div>
+
     <div class = "container-fluid">
       <div class = "row">
         <div class = "col-md-3 col-xs-1"></div>
@@ -122,7 +143,7 @@
     </div>
     <div class = "container">
       <div class = "row">
-        <div class = "col-md-4 col-xs-offset-4">
+        <div style = "text-align: center;">
           <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
             <input type="hidden" name="cmd" value="_s-xclick">
             <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
@@ -132,6 +153,28 @@
           </form>
         </div>
       </div>
+      
+      <div class = "serverhosting">
+        <script type="text/javascript">
+          ( function() {
+            if (window.innerWidth > 1000){
+              if (window.CHITIKA === undefined) { window.CHITIKA = { 'units' : [] }; };
+              var unit = {"calltype":"async[2]","publisher":"deltameter","width":728,"height":90,"sid":"Chitika Default"};
+              var placement_id = window.CHITIKA.units.length;
+              window.CHITIKA.units.push(unit);
+              document.write('<div id="chitikaAdBlock-' + placement_id + '"></div>');
+            }else{
+              CHITIKA = window.CHITIKA ? window.CHITIKA : { 'units' : [] };
+              CHITIKA.publisher = 'deltameter';
+              var s = document.createElement('script');
+              s.src = '//cdn.chitika.net/getads.js';
+              try { document.getElementsByTagName('head')[0].appendChild(s); } catch(e) { document.write(s.outerHTML); }
+            }
+        }());
+        </script>
+        <script type="text/javascript" src="//cdn.chitika.net/getads.js" async></script>
+      </div>
+
       <div class = "row">
         <div class = "text-center">Hosting ain't free</div>
         <div class = "col-md-3 col-xs-1"></div>
