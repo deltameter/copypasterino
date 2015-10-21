@@ -2,7 +2,7 @@
 Thumbs.db
 ehthumbs.db
 
-.json
+*.json
 
 # Folder config file
 Desktop.ini
