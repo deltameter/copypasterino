@@ -384,7 +384,7 @@ var updatePastaScore = function updateHotPastas(){
     Copypasta.find({}, function(err, pastas){
         async.each(pastas, function(pasta, callback){
             //get time in hours then add 2, so new posts with 1 upvote dont rise up
-            var time = Math.max(((currentTime - pasta.created_on.valueOf()) / 3.6e6) + 2, 25000);
+            var time = (currentTime - pasta.created_on.valueOf()) / 3.6e6) + 2;
             var pastaScore = Math.pow(pasta.favourites - 1, 5/6) / Math.pow(time + 2, gravity);
             if (!(pastaScore > 0)){
                 pastaScore = 0;
