@@ -157,6 +157,19 @@ app.get('/admin', function(req, res){
     }
 });
 
+app.get('/adminerino', function(req, res){
+    var credentials = auth(req)
+
+    if (!credentials || credentials.name !== 'admin' || credentials.pass !== 'bushdid911') {
+    res.writeHead(401, {
+      'WWW-Authenticate': 'Basic realm="YOU SHALL NOT PASS! seriously dont enter pls"'
+    })
+        res.end()
+    } else {
+        res.render('otheradmin');
+    }
+});
+
 app.post('/approvepasta', function(req, res){
     Copypasta.findOne()
     .sort('-id')
