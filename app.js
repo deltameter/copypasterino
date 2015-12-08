@@ -147,7 +147,7 @@ app.post('/favouritepasta', function(req, res){
 app.get('/admin', function(req, res){
     var credentials = auth(req)
 
-    if (!credentials || credentials.name !== 'michaelluo' || credentials.pass !== 'ayylmao') {
+    if (!credentials || credentials.name !== 'michaelluo' || credentials.pass !== 'nicekgm') {
     res.writeHead(401, {
       'WWW-Authenticate': 'Basic realm="YOU SHALL NOT PASS! seriously dont enter pls"'
     })
