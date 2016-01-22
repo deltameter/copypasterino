@@ -23,6 +23,16 @@ var adsSchema = new Schema({
 	link: String
 });
 
-exports.PendingPasta = mongoose.model('pendingpasta', pendingpastasSchema);
-exports.Copypasta = mongoose.model('copypasta', copypastasSchema);
-exports.Ad = mongoose.model('ad', adsSchema);
+copypastasSchema.statics.random = function(callback) {
+  this.count(function(err, count) {
+    if (err) {
+      return callback(err);
+    }
+    var rand = Math.floor(Math.random() * count);
+    this.findOne().skip(rand).exec(callback);
+  }.bind(this));
+};
+
+exports.PendingPasta = mongoose.model('Pendingpasta', pendingpastasSchema);
+exports.Copypasta = mongoose.model('Copypasta', copypastasSchema);
+exports.Ad = mongoose.model('Ad', adsSchema);

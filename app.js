@@ -1,3 +1,5 @@
+global.__base = __dirname + '/';
+
 var express = require('express');
 var path = require('path');
 /*var favicon = require('serve-favicon');
@@ -25,6 +27,8 @@ var topFileUpdateInterval = 5 * 60 * 1000; // x minutes * seconds * milliseconds
 var hotFileUpdateInterval = 10 * 1000; //update every 10 sec
 
 var ppp = 15; //pastas per page
+
+var api = require('./routes/controllers/api');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -55,6 +59,10 @@ app.use('/', games)
 //Load in server variables
 
 var serverVars = JSON.parse(fs.readFileSync('servervars.txt', 'utf8'));
+
+//API
+app.get('/api/copypasta/random', api.getRandomPasta);
+app.get('/api/copypasta/:id', api.getPastaByID);
 
 app.get('/', function(req, res) {
         res.render('index', {
