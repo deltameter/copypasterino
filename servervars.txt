@@ -1,1 +1,1 @@
-{"alertMessage":"Want to learn to play CSGO? Visit <a href=\"https://csgoschool.com\"> CSGOSchool.com </a> for guides and lessons!","alertType":"alert-success"}
+{"alertMessage":"man i am not a good sys admin","alertType":"alert-success"}
